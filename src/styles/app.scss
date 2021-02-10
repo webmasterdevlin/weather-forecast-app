@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  background: linear-gradient(
+      180deg,
+      #0668c2 0%,
+      #1c0168 100%,
+      rgba(68, 12, 158, 0) 100%
+    ),
+    #c4c4c4;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px 0;
+  min-height: 100vh;
+}
+
+html,
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px;
+  font-weight: 400;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.svg-icon {
+  height: 1em;
+  width: 1em;
+}
+
+
+.weather-app-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .weather-app {
+    padding: 25px 35px;
+    max-width: 900px;
+    width: 100%;
+    // border-radius: 20px;
+  }
+}
+
+/**
+ * Header
+ */
+
+ header {
+   display: flex;
+   .header-icon-wrap {
+     flex: 0 0 auto;
+     font-size: 117px;
+     color: #fff;
+     padding-right: 25px;
+   }
+   .header-content-wrap {
+     flex: 1 0 auto;
+     .header-location {
+       font-size: 25px;
+       line-height: 29px;
+       margin: 0 0 1px;
+     }
+     .header-temp {
+      font-size: 20px;
+      line-height: 23px;
+      margin: 0 0 5px;
+     }
+     p {
+       margin: 0 0 5px;
+     }
+   }
+ }
+
+
+/**
+ * Body
+ */
+
+ .weather-app-body {
+   padding-top: 25px;
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+   .day-name {
+     margin: 0 0 5px;
+   }
+   .daily-stats-icon {
+    font-size: 50px;
+    display: block;
+    margin: 0 0 15px;
+    text-align: center;
+   }
+   .daily-temp {
+     font-size: 12px;
+     line-height: 15px;
+     span {
+       display: block;
+       &.temp-max {
+         color: #FF0000;
+         margin-bottom: 5px;
+       }
+       &.temp-min {
+         color: #00FFFF;
+       }
+     }
+   }
+ }
+
+ @media (max-width: 567.98px) {
+   header .header-icon-wrap {
+     font-size: 90px;
+     padding-right: 20px;
+   }
+
+   header .header-content-wrap {
+    .header-location {
+      font-size: 22px;
+      margin: 0 0 4px;
+    }
+   }
+
+  .weather-app-body {
+    flex-wrap: wrap;
+    .daily-stats {
+      flex-basis: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      .daily-stats-icon {
+        margin: 0;
+      }
+      .day-name {
+        margin: 0;
+        flex: 0 0 100px;
+        text-align: left;
+        padding-right: 20px;
+      }
+      .daily-temp {
+        flex: 1 0 auto;
+        display: flex;
+        span {
+          margin: 0;
+          flex-grow: 1;
+          text-align: right;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+ }
+
+ .location-not-allowed {
+   text-align: center;
+ }
