@@ -91,6 +91,10 @@ export default defineComponent({
           },
         })
         .then((response) => {
+          console.log(
+            "WeatherForecastData:",
+            JSON.stringify(response.data, null, 2)
+          );
           setWeatherData(response.data);
           daily.value = response.data.daily;
         });
