@@ -1,8 +1,8 @@
 <template>
   <div class="weather-app-root">
-    <template v-if="icon === '50d' || icon === '50n'">
-      <!-- To see the rain effect, disable above, enable below -->
-      <!-- <template> -->
+    <!-- <template v-if="icon === '50d' || icon === '50n'"> -->
+    <!-- To see the rain effect, disable above, enable below -->
+    <template>
       <div class="rain front-row"></div>
       <!-- https://codepen.io/arickle/pen/XKjMZY -->
       <div class="rain back-row"></div>
@@ -118,44 +118,44 @@ export default defineComponent({
       let backDrops = "";
 
       while (increment < 100) {
-        const randoHundo = Math.floor(Math.random() * (98 - 1 + 1) + 1);
-        const randoFiver = Math.floor(Math.random() * (5 - 2 + 1) + 2);
-        increment += randoFiver;
+        const goHundred = Math.floor(Math.random() * (98 - 1 + 1) + 1);
+        const goFive = Math.floor(Math.random() * (5 - 2 + 1) + 2);
+        increment += goFive;
         drops +=
           '<div class="drop" style="left: ' +
           increment +
           "%; bottom: " +
-          (randoFiver + randoFiver - 1 + 100) +
+          (goFive + goFive - 1 + 100) +
           "%; animation-delay: 0." +
-          randoHundo +
+          goHundred +
           "s; animation-duration: 0.5" +
-          randoHundo +
+          goHundred +
           's;"><div class="stem" style="animation-delay: 0.' +
-          randoHundo +
+          goHundred +
           "s; animation-duration: 0.5" +
-          randoHundo +
+          goHundred +
           's;"></div><div class="splat" style="animation-delay: 0.' +
-          randoHundo +
+          goHundred +
           "s; animation-duration: 0.5" +
-          randoHundo +
+          goHundred +
           's;"></div></div>';
         backDrops +=
           '<div class="drop" style="right: ' +
           increment +
           "%; bottom: " +
-          (randoFiver + randoFiver - 1 + 100) +
+          (goFive + goFive - 1 + 100) +
           "%; animation-delay: 0." +
-          randoHundo +
+          goHundred +
           "s; animation-duration: 0.5" +
-          randoHundo +
+          goHundred +
           's;"><div class="stem" style="animation-delay: 0.' +
-          randoHundo +
+          goHundred +
           "s; animation-duration: 0.5" +
-          randoHundo +
+          goHundred +
           's;"></div><div class="splat" style="animation-delay: 0.' +
-          randoHundo +
+          goHundred +
           "s; animation-duration: 0.5" +
-          randoHundo +
+          goHundred +
           's;"></div></div>';
       }
 
